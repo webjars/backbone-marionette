@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>backbone-marionette</artifactId>
-    <version>1.1.1-SNAPSHOT</version>
+    <version>2.0.1-SNAPSHOT</version>
     <name>Backbone.Marionette</name>
     <description>WebJar for Backbone.Marionette</description>
     <url>http://webjars.org</url>
@@ -41,7 +41,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>1.1.0</upstreamVersion>
+        <upstreamVersion>2.0.1</upstreamVersion>
         <downloadUrl>https://raw.github.com/marionettejs/backbone.marionette/v${upstreamVersion}/lib</downloadUrl>
         <destinationDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destinationDir>
     </properties>
@@ -60,12 +60,12 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>underscorejs</artifactId>
-            <version>1.4.2</version>
+            <version>1.4.4</version>
         </dependency>
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>backbonejs</artifactId>
-            <version>0.9.2</version>
+            <version>1.1.2</version>
         </dependency>
         <dependency>
             <groupId>org.webjars</groupId>
