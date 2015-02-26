@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.webjars</groupId>
+        <artifactId>backbone-marionette-parent</artifactId>
+        <version>2.4.0-SNAPSHOT</version>
+    </parent>
+
+    <packaging>jar</packaging>
+    <artifactId>backbone-marionette-core</artifactId>
+    <name>Backbone.Marionette Core</name>
+    <description>WebJar for Backbone.Marionette Core</description>
+
+    <properties>
+        <requirejs>
+            {
+                "paths": {
+                    "backbone-marionette-core": "backbone.marionette"
+                },
+                "shim": {
+                    "backbone-marionette-core": [
+                        "jquery",
+                        "underscore",
+                        "backbone",
+                        "backbone-wreqr",
+                        "backbone-babysitter"
+                    ]
+                }
+            }
+        </requirejs>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>1.8.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>underscorejs</artifactId>
+            <version>1.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>backbonejs</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>backbone-wreqr</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>backbone-babysitter</artifactId>
+            <version>0.1.6</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
+                <executions>
+                    <execution>
+                        <phase>process-resources</phase>
+                        <goals><goal>run</goal></goals>
+                        <configuration>
+                            <target>
+                                <mkdir dir="${destinationDir}" />
+                                <get src="${downloadUrl}/core/backbone.marionette.js" dest="${destinationDir}" />
+                                <get src="${downloadUrl}/core/backbone.marionette.min.js" dest="${destinationDir}" />
+                                <get src="${downloadUrl}/core/backbone.marionette.map" dest="${destinationDir}" />
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <targetPath>${destinationDir}</targetPath>
+            </resource>
+        </resources>
+    </build>
+
+</project>

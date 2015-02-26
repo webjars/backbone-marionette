@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <mkdir dir="/home/bicou/backbone-marionette/main/target/classes/META-INF/resources/webjars/backbone-marionette/2.4.0"/>
+  <get src="https://raw.githubusercontent.com/marionettejs/backbone.marionette/v2.4.0/lib/backbone.marionette.js" dest="/home/bicou/backbone-marionette/main/target/classes/META-INF/resources/webjars/backbone-marionette/2.4.0"/>
+  <get src="https://raw.githubusercontent.com/marionettejs/backbone.marionette/v2.4.0/lib/backbone.marionette.min.js" dest="/home/bicou/backbone-marionette/main/target/classes/META-INF/resources/webjars/backbone-marionette/2.4.0"/>
+  <get src="https://raw.githubusercontent.com/marionettejs/backbone.marionette/v2.4.0/lib/backbone.marionette.map" dest="/home/bicou/backbone-marionette/main/target/classes/META-INF/resources/webjars/backbone-marionette/2.4.0"/>
+</target>
+</project>

@@ -4,12 +4,10 @@
 requirejs.config({
     shim: {
         'backbone.marionette': [
-            'webjars!json2.js',
             'webjars!jquery.js',
             'webjars!underscore.js',
             'webjars!backbone.js',
-            'webjars!backbone.eventbinder.js',
-            'webjars!backbone.wreqr.js',
+            'webjars!backbone.wreq.js',
             'webjars!backbone.babysitter.js' ]
     }
 });
