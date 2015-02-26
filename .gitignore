@@ -1,3 +1,5 @@
 /target
 /.idea
 /*.iml
+core/target
+main/target
