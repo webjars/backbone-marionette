@@ -75,7 +75,7 @@
                                 <mkdir dir="${destinationDir}" />
                                 <get src="${downloadUrl}/core/backbone.marionette.js" dest="${destinationDir}" />
                                 <get src="${downloadUrl}/core/backbone.marionette.min.js" dest="${destinationDir}" />
-                                <get src="${downloadUrl}/core/backbone.marionette.map" dest="${destinationDir}" />
+                                <get src="${downloadUrl}/core/backbone.marionette.min.js.map" dest="${destinationDir}" />
                             </target>
                         </configuration>
                     </execution>
